@@ -1,6 +1,52 @@
-# React + TypeScript + Vite
+# Task Management Application (React + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
+
+- React + TypeScript + Vite
+- Material UI (MUI) + Jost typography
+- Zustand state management with localStorage persistence
+
+## Features
+
+- Create, edit, delete tasks
+- Mark tasks completed (quick action on list or via edit screen)
+- Search tasks by title/description
+- Filter tasks (All / Incomplete / Completed)
+- Status grouping (Pending / In Progress / Completed) with expandable sections
+- Subtle list animations for add/remove
+
+## Running Locally
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Open the URL shown in the terminal (typically http://localhost:5173).
+
+## Production Build
+
+```bash
+pnpm build
+pnpm preview
+```
+
+## Deploy
+
+This is a standard Vite SPA and can be deployed to Vercel/Netlify.
+
+- Vercel:
+  - Framework: Vite
+  - Build command: `pnpm build`
+  - Output directory: `dist`
+- Netlify:
+  - Build command: `pnpm build`
+  - Publish directory: `dist`
+
+## Design Notes
+
+- Tasks are persisted with Zustand `persist` middleware under `tresata.tasks.v1`.
+- The UI uses MUI components and avoids nested interactive elements for accessibility.
 
 Currently, two official plugins are available:
 
