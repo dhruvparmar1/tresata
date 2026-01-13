@@ -30,6 +30,8 @@ jobs:
           cache: pnpm
 
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -52,4 +54,3 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
-
